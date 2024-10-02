@@ -1,10 +1,12 @@
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
+import { inflate } from 'node:zlib';
 const userInput = readline.createInterface({input, output});
 
 let totaal = 0;
 let grootsteGetal = 0;
-let kleinsteGetal = 0;
+let kleinsteGetal = Infinity;
+
 
 
 for (let i = 1; i <= 5; i++) {
@@ -12,7 +14,7 @@ for (let i = 1; i <= 5; i++) {
     if (num > grootsteGetal ) {
          grootsteGetal = num;
     };
-    if (num < kleinsteGetal ) {
+    if (num < kleinsteGetal) {
         kleinsteGetal = num;
     };
 
