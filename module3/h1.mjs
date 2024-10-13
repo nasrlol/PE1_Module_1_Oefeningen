@@ -2,17 +2,22 @@ import * as readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 const userInput = readline.createInterface({ input, output });
 
-const space = " "
 let ster = "*";
+let rij = 3
 
-for (let hoogte = 1; hoogte <= 3; hoogte++) {
-    let output = "";
-    for (let spatie = 3; spatie != 0; spatie = spatie - 1){
+
+for (let i = 1; i <= rij; i++) {
+    let output = " ";
+
+    for (let j = 1; j <= rij; j++) {
         output += space;
-        
+
     }
+    for (let k = 1; k <= (2 * i - 1); k++) {
+        output += ster;
 
-
-    console.log(output);
+    }
+    console.log(output)
 }
+
 process.exit()
