@@ -17,11 +17,11 @@ for (let i = 1; i <= rij; i++) {
        output += ster;
     }
 
-    console.log(line);
+    console.log(output);
 }
 
 for (let i = rij - 1; i >= 1; i--) {
-    letoutput = "";
+    let output = "";
 
     for (let j = 1; j <= rij - i; j++) {
        output += space;
@@ -31,7 +31,7 @@ for (let i = rij - 1; i >= 1; i--) {
        output += ster;
     }
 
-    console.log(line);
+    console.log(output);
 }
 
 userInput.close();
