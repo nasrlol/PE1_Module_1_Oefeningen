@@ -8,7 +8,9 @@ let num3 = parseFloat(await userInput.question("Geef een getal: "));
 let num4 = parseFloat(await userInput.question("Geef een getal: "));
 let num5 = parseFloat(await userInput.question("Geef een getal: "));
 
-let actie = await userInput.question("Wil je het max of min vinden van de getallen?: ");
+let actie = await userInput.question(
+  "Wil je het max of min vinden van de getallen?: "
+);
 
 if (actie == "min") {
   let min = Math.min(num1, num2, num3, num4, num5);

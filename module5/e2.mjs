@@ -14,7 +14,7 @@ Zorg ervoor dat je functie om de oppervlakte van een vierkant te berekenen de fu
 */
 
 function cirkel(straal) {
-  console.log(`De oppervlakte van de ${figuur} is ${Math.PI * (straal ** 2)}`);
+  console.log(`De oppervlakte van de ${figuur} is ${Math.PI * straal ** 2}`);
 }
 
 function driehoek(basis, hoogte) {
@@ -31,7 +31,7 @@ function vierkant(zijde) {
 
 console.log("Van welk figuur wil je de oppervlakte berekenen?: ");
 let user = await userInput.question("CIRKEL, DRIEHOEK, RECHTHOEK, VIERKANT ");
-let figuur = user.toLowerCase()
+let figuur = user.toLowerCase();
 if (figuur == "cirkel") {
   let straal = await userInput.question(
     "Hoeveel is de straal van de cirkel dat je wil berekenen?: "
@@ -61,6 +61,3 @@ if (figuur == "cirkel") {
 }
 
 process.exit();
-
-
-
