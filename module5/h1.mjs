@@ -2,17 +2,19 @@ import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
-function delers(getal) {
+function perfect(getal) {
   let som = 0;
   for (let i = 0; i <= getal; i++) {
-    if (getal % i == 0 && i != getal) {
-      console.log(i);
+    if (getal % i == 0 && getal != i) {
       som += i;
     }
   }
-  console.log(`de som is ${som}`);
+  if (som == getal) {
+    console.log("perfect getal!");
+  } else {
+    console.log("geef perfect getal!");
+  }
 }
-
 let num = parseFloat(await userInput.question("Geef een getal: "));
-delers(num);
+perfect(num);
 process.exit();
