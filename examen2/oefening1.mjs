@@ -24,14 +24,19 @@ function random(min, max) {
 
 let aantal = parseFloat(await userInput.question("hoeveel getallen wil je generen? "));
 let getallen = []
+let even = []
 
 for (let i = 0; i < aantal; i++){
 
 	getallen.push(random(0,10)); 
 }
 for (let i = 0; i < getallen.length - 1; i++){
-	if getallen[i]
+	if (getallen[i] % 2 == 0) {
+		even.push(getallen[i])		
+	} 
 }
 
+console.log("de willekeurige getallen zijn : " + getallen);
+console.log("de even getallen zijn : " + even);
 
 process.exit();
